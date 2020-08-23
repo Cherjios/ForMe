@@ -28,4 +28,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
+  //if user clicks on personal info
+  app.get("/personalInfo", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/personalInfo.html"));
+  })
+
 };
