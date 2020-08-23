@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var personalInfo = $("#personalInfo");
   var medicalHistory = $("#medicalHistory");
+  var dentalHistory = $("#dentalHistory");
 
 
   // This file just does a GET request to figure out which user is logged in
@@ -27,6 +28,17 @@ medicalHistory.on("click", function(even){
 function GotoMedicalHistory(){
   window.location.replace("/medicalHistory");
 }
+
+//Action when user click on "Dental history"
+dentalHistory.on("click", function(even){
+  event.preventDefault();
+  GotoDentalHistory();
+}) 
+
+function GotoDentalHistory(){
+  window.location.replace("/dentalHistory");
+}
+
 
 
 

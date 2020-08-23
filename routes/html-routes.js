@@ -38,4 +38,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/medicalHistory.html"));
   })
 
+  //if user clicks on Dental history
+  app.get("/dentalHistory", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/dentalHistory.html"));
+  })
+
 };
