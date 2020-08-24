@@ -50,7 +50,7 @@ module.exports = function (sequelize, DataTypes){
             }
         },
         phoneNumber:{
-            type:DataTypes.String,
+            type:DataTypes.STRING,
             allowNull:false,
             validate:{
                 len:[10]
@@ -90,7 +90,7 @@ module.exports = function (sequelize, DataTypes){
             }
         },
         emergencyPhoneNumber:{
-            type:DataTypes.String,
+            type:DataTypes.STRING,
             allowNull:false,
             validate:{
                 len:[10]
@@ -98,13 +98,7 @@ module.exports = function (sequelize, DataTypes){
         }
     });
 
-    PersonalInfo.associate = function(models){
-        PersonalInfo.belongsTo(models.Users,{
-            foreignKey:{
-                allowNull:false
-            }
-        });
-    };
+    
 
 
     return PersonalInfo;

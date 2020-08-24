@@ -21,6 +21,12 @@
     </div>
   </div>
   <div class="container">
+
+    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span> <span class="msg"></span>
+    </div>
+    
     <form id="GetPersonalInfo">
       <div class="row">
         <div class="col">
@@ -65,38 +71,38 @@
       <div class="row">
         <div class="col">
           <label for="Name">Phone Number</label>
-          <input type="tel" class="form-control">
+          <input type="tel" class="form-control" id="inputPhoneNumber">
         </div>
         <div class="col">
           <label for="Name">Work/Home Number</label>
-          <input type="tel" class="form-control">
+          <input type="tel" class="form-control" id="inputWHPhoneNumber">
         </div>
       </div>
 
       <div class="form-group">
         <label for="exampleFormControlInput1">Date of birth</label>
-        <input type="date" class="form-control" id="inputExpiration">
+        <input type="date" class="form-control" id="inputDateOfBirth">
       </div>
 
       <div class="form-group">
         <label for="exampleFormControlSelect1">Sex</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select class="form-control" id="inputSex">
           <option>MALE</option>
           <option>FEMALE</option>
         </select>
       </div>
       <div class="form-group">
         <label for="Emergency contact name">Emergency Contact Name</label>
-        <input type="text" class="form-control" id="inputExpiration">
+        <input type="text" class="form-control" id="inputEmergencyName">
       </div>
       <div class="row">
         <div class="col">
           <label for="Name">Relationship</label>
-          <input type="text" class="form-control" placeholder="Relationship">
+          <input type="text" class="form-control" placeholder="Relationship" id="inputRelationship">
         </div>
         <div class="col">
           <label for="Name">Emergency Contact Phone Number:</label>
-          <input type="tel" class="form-control" placeholder="Emergency Contact Phone Number">
+          <input type="tel" class="form-control" placeholder="Emergency Contact Phone Number" id="inputEmergencyPhN">
         </div>
       </div>
       <div class="form-group form-check">
