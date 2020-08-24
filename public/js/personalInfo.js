@@ -16,7 +16,7 @@ $(document).ready(function () {
             dateOfBirth:$("#inputDateOfBirth").val().trim(),
             sex:$("#inputSex").val().trim(),
             emergencyContactName:$("#inputEmergencyName").val().trim(), 
-            relationship:$("#inputRelationship").val().trim() ,
+            relationship:$("#inputRelationship").val().trim(),
             emergencyPhoneNumber:$("#inputEmergencyPhN") 
         }
         console.log(personalInfoData);
@@ -28,10 +28,69 @@ $(document).ready(function () {
             $("#inputLastName").addClass("error");
             showErr("Last Name is required");
         }
+        else if(isEmpty(personalInfoData.address)){
+            $("#inputAddress").addClass("error");
+            showErr("Address is required");
+        }
+        else if(isEmpty(personalInfoData.address)){
+            $("#inputCity").addClass("error");
+            showErr("City is required");
+        }
+        else if(isEmpty(personalInfoData.state)){
+            $("#inputState").addClass("error");
+            showErr("State is required");
+        }
+        else if(isEmpty(personalInfoData.zipCode)){
+            $("#inputZip").addClass("error");
+            showErr("Zip code is required");
+        }
+        else if(isEmpty(personalInfoData.phoneNumber)){
+            $("#inputPhoneNumber").addClass("error");
+            showErr("Phone Number is required");
+        }
+        else if(isEmpty(personalInfoData.dateOfBirth)){
+            $("#inputDateOfBirth").addClass("error");
+            showErr("Day of birth is required");
+        }
+        else if(isEmpty(personalInfoData.sex)){
+            $("#inputSex").addClass("error");
+            showErr("Sex is required");
+        }
+        else if(isEmpty(personalInfoData.emergencyContactName)){
+            $("#inputEmergencyName").addClass("error");
+            showErr("Emergency Contact Name is required");
+        }
+        else if(isEmpty(personalInfoData.relationship)){
+            $("#inputRelationship").addClass("error");
+            showErr("Emergency Contact Relationship is required");
+        }
+        else if(isEmpty(personalInfoData.emergencyPhoneNumber)){
+            $("#inputEmergencyPhN").addClass("error");
+            showErr("Emergency Contact Relationship is required");
+        }
+        else{
+            $.post("/api/personalInfo", personalInfoData).then(function(result){
+                console.log(result);
+                location.reload();
+            }).fail(function(err){
+                showErr("Error occurred while Saving, check all the values entered")
+            });
+            $("#inputName").removeClass("error");
+            $("#inputLastName").removeClass("error");
+            $("#inputLastName").removeClass("error");
+            $("#inputAddress").removeClass("err");
+            $("#inputCity").removeClass("err");
+            $("#inputState").removeClass("err");
+            $("#inputZip").removeClass("err");
+            $("#inputPhoneNumber").removeClass("err");
+            $("#inputDateOfBirth").removeClass("err");
+            $("#inputSex").removeClass("err");
+            $("#inputEmergencyName").removeClass("err");
+            $("#inputRelationship").removeClass("err");
+            $("#inputEmergencyPhN").removeClass("err");
+        }
     
-        
-    
-    })
+    });
 
 
     function isEmpty(str){
