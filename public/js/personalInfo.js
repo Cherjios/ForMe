@@ -15,9 +15,10 @@ $(document).ready(function () {
             sex: $("#inputSex").val().trim(),
             emergencyContactName: $("#inputEmergencyName").val().trim(),
             relationship: $("#inputRelationship").val().trim(),
-            emergencyPhoneNumber: $("#inputEmergencyPhN")
+            emergencyPhoneNumber: $("#inputEmergencyPhoneNumber").val().trim()
         }
         console.log(personalInfoData);
+        
         if (isEmpty(personalInfoData.name)) {
             $("#inputName").addClass("error");
             showErr("Name is required");
@@ -63,11 +64,12 @@ $(document).ready(function () {
             showErr("Emergency Contact Relationship is required");
         }
         else if (isEmpty(personalInfoData.emergencyPhoneNumber)) {
-            $("#inputEmergencyPhN").addClass("error");
-            showErr("Emergency Contact Relationship is required");
+            $("#inputEmergencyPhoneNumber").addClass("error");
+            showErr("Emergency Contact Phone Number is required");
         }
         else {
-            $.post("/api/personalInfo", personalInfoData).then(function (result) {
+            $.post("/api/personalInfo", personalInfoData)
+                .then(function (result) {
                 console.log(result);
                 location.reload();
             }).fail(function (err) {

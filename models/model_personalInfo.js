@@ -22,11 +22,7 @@ module.exports = function (sequelize, DataTypes){
             }
         },
         address2:{
-            type:DataTypes.STRING,
-            allowNull:false,
-            validate:{
-                len:[1]
-            }
+            type:DataTypes.STRING
         },
         city:{
             type:DataTypes.STRING,
