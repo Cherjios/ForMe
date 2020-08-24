@@ -18,7 +18,7 @@ $(document).ready(function () {
             emergencyPhoneNumber: $("#inputEmergencyPhoneNumber").val().trim()
         }
         console.log(personalInfoData);
-        
+
         if (isEmpty(personalInfoData.name)) {
             $("#inputName").addClass("error");
             showErr("Name is required");
@@ -102,6 +102,7 @@ $(document).ready(function () {
 
     function showErr(err) {
         $("#alert .msg").text(err);
+        $("#alert").fadeIn(500);
     }
 
 });
