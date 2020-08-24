@@ -35,7 +35,7 @@ module.exports = function (sequelize, DataTypes){
                 len:[1]
             }
         },
-        State:{
+        state:{
             type:DataTypes.STRING,
             allowNull:false,
             validate:{
@@ -49,21 +49,21 @@ module.exports = function (sequelize, DataTypes){
                 len:[5]
             }
         },
-        PhoneNumber:{
+        phoneNumber:{
             type:DataTypes.String,
             allowNull:false,
             validate:{
                 len:[10]
             }
         },
-        WHPhoneNumber:{
+        whPhoneNumber:{
             type:DataTypes.STRING,
             allowNull:false,
             validate:{
                 len:[10]
             }
         },
-        DateOfBirth:{
+        dateOfBirth:{
             type:DataTypes.DATEONLY,
             allowNull:false,
             isDate:true,
@@ -75,21 +75,21 @@ module.exports = function (sequelize, DataTypes){
                 len:[1]
             }
         },
-        EmergencyContactName:{
+        emergencyContactName:{
             type:DataTypes.STRING,
             allowNull:false,
             validate:{
                 len:[1]
             }
         },
-        Relationship:{
+        relationship:{
             type:DataTypes.STRING,
             allowNull:false,
             validate:{
                 len:[1]
             }
         },
-        EmergencyPhoneNumber:{
+        emergencyPhoneNumber:{
             type:DataTypes.String,
             allowNull:false,
             validate:{

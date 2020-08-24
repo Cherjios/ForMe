@@ -21,15 +21,15 @@
     </div>
   </div>
   <div class="container">
-    <form>
+    <form id="GetPersonalInfo">
       <div class="row">
         <div class="col">
           <label for="Name">Name</label>
-          <input type="text" class="form-control" placeholder="First name">
+          <input type="text" class="form-control" placeholder="First name" id="inputName">
         </div>
         <div class="col">
           <label for="Name">Last Name</label>
-          <input type="text" class="form-control" placeholder="Last name">
+          <input type="text" class="form-control" placeholder="Last name" id="inputLastName">
         </div>
       </div>
       <div class="form-group">
@@ -49,7 +49,12 @@
           <label for="inputState">State</label>
           <select id="inputState" class="form-control">
             <option selected>CA</option>
-            <option>...</option>
+            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CO</option><option>CT</option><option>DE</option><option>FL</option><option>GA</option> <option>HI</option><option>ID</option>
+            <option>IL</option><option>IN</option><option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option><option>MD</option><option>MA</option> <option>MI</option><option>MN</option>
+            <option>MS</option><option>MO</option><option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option><option>NM</option> <option>NY</option><option>NC</option>
+            <option>ND</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option> <option>TX</option><option>UT</option>
+            <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option><option>AS</option><option>DC</option><option>FM</option> <option>GU</option><option>MH</option>
+            <option>MP</option><option>PW</option><option>PR</option><option>IV</option>
           </select>
         </div>
         <div class="form-group col-md-2">
@@ -112,6 +117,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+
+    <script src="../js/personalInfo.js"></script>
 </body>
 
 </html>
