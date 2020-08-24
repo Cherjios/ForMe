@@ -1,0 +1,113 @@
+module.exports = function (sequelize, DataTypes){
+    var PersonalInfo = sequelize.define("PersonalInfo",{
+        name:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[1]
+            }
+        },
+        last_Name:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[1]
+            }
+        },
+        address:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[1]
+            }
+        },
+        address2:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[1]
+            }
+        },
+        city:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[1]
+            }
+        },
+        State:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[2]
+            }
+        },
+        zipCode:{
+            type:DataTypes.INTEGER,
+            allowNull:false,
+            validate:{
+                len:[5]
+            }
+        },
+        PhoneNumber:{
+            type:DataTypes.String,
+            allowNull:false,
+            validate:{
+                len:[10]
+            }
+        },
+        WHPhoneNumber:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[10]
+            }
+        },
+        DateOfBirth:{
+            type:DataTypes.DATEONLY,
+            allowNull:false,
+            isDate:true,
+        },
+        sex:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[1]
+            }
+        },
+        EmergencyContactName:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[1]
+            }
+        },
+        Relationship:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[1]
+            }
+        },
+        EmergencyPhoneNumber:{
+            type:DataTypes.String,
+            allowNull:false,
+            validate:{
+                len:[10]
+            }
+        }
+    });
+
+    PersonalInfo.associate = function(models){
+        PersonalInfo.belongsTo(models.Users,{
+            foreignKey:{
+                allowNull:false
+            }
+        });
+    };
+
+
+    return PersonalInfo;
+
+
+};

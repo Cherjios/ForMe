@@ -47,4 +47,21 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.post("/api/personalInfo", function(req, res){
+    db.PersonalInfo.create(req.body).then(function(dbInfo){
+      res.json(dbInfo);
+    }).catch(function(err){
+      res.status(401).json(err);
+    });
+  });
+
+
+
+
+
+
+
+
+
 };
