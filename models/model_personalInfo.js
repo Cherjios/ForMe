@@ -53,11 +53,7 @@ module.exports = function (sequelize, DataTypes){
             }
         },
         whPhoneNumber:{
-            type:DataTypes.STRING,
-            allowNull:false,
-            validate:{
-                len:[10]
-            }
+            type:DataTypes.STRING
         },
         dateOfBirth:{
             type:DataTypes.DATEONLY,
