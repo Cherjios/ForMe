@@ -2,6 +2,8 @@ $(document).ready(function () {
   var personalInfo = $("#personalInfo");
   var medicalHistory = $("#medicalHistory");
   var dentalHistory = $("#dentalHistory");
+  var personalInfoTitle = $("#personalInfoTitle");
+  var personalInfoB = $("#personalInfoB");
 
 
   // This file just does a GET request to figure out which user is logged in
@@ -13,16 +15,23 @@ $(document).ready(function () {
   $.get("/api/personalInfo").then(function (data) {
     if(data){
       var span = $("<span>").text("Completed");
-      var br = $("<br>")
-      personalInfo.append(br);
+      // var br = $("<br>")
+      // personalInfo.append(br);
       span.addClass("text-success");
-      personalInfo.append(span);
+      personalInfoTitle.append(span);
+      var update_button = $("<button>");
+      update_button.text("Update");
+      update_button.addClass("btn btn-warning");
+      personalInfo.append(update_button);
+      personalInfoB.attr("style", "display:none");
+      
+  
     }
   
   });
 
   // Action when user click on "Personal information"
-  personalInfo.on("click", function (event) {
+  personalInfoB.on("click", function (event) {
     event.preventDefault();
     GotoPersonalInfo();
   })

@@ -11,32 +11,40 @@
 
 <body>
   <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome "<span class="member-name"></span>"</h2>
-        <h3>In order to be a patient and be seen by the doctor you need to fill up the following forms:</h3>
-        <br/>
-        <div class="list-group">
-          <button type="button" class="list-group-item list-group-item-action active">Forms to fill up </button>
-          <button type="button" id ="personalInfo" class="list-group-item list-group-item-action">Personal information</button>
-          <button type="button" id ="medicalHistory"  class="list-group-item list-group-item-action">Medical history</button>
-          <button type="button" id ="dentalHistory"  class="list-group-item list-group-item-action">Dental history</button>
-        </div>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/logout">
+          Logout
+        </a>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Welcome "<span class="member-name"></span>"</h2>
+        <h3>In order to be a patient and be seen by the doctor you need to fill up the following forms:</h3>
+      </div>
+      <br />
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h2> Forms to fill up</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col" id="personalInfo">
+        <h3 id="personalInfoTitle"> Personal information </h3>
+        <button type="button" id="personalInfoB" class="btn btn-success">Add Personal information</button>
+      </div>
+
+      
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/members.js"></script>
 
 </body>
 
