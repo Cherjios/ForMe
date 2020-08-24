@@ -56,6 +56,39 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/personalInfo", function(req, res) {
+    if (!req.PersonalInfo) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
+      
+      res.json({
+        name: req.PersonalInfo.name,
+        last_name: req.PersonalInfo.last_Name,
+        address: req.PersonalInfo.address,
+        address2: req.PersonalInfo.address2,
+        city:req.PersonalInfo.city,
+        state:req.PersonalInfo.state,
+        zipCode:req.PersonalInfo.zipCode,
+        phoneNumber:req.PersonalInfo.phoneNumber,
+        whPhoneNumber:req.PersonalInfo.whPhoneNumber,
+        dateOfBirth:req.PersonalInfo.dateOfBirth,
+        sex:req.PersonalInfo.sex,
+        emergencyContactName:req.PersonalInfo.emergencyContactName,
+        relationship:req.PersonalInfo.relationship,
+        emergencyPhoneNumber:req.PersonalInfo.emergencyContactName
+      });
+    }
+  });
+
+
+
+
+
+
+
+
+
 
 
 };

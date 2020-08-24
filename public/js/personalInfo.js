@@ -71,7 +71,9 @@ $(document).ready(function () {
             $.post("/api/personalInfo", personalInfoData)
                 .then(function (result) {
                 console.log(result);
-                location.reload();
+                console.log(result);
+                // location.reload();
+                window.location.replace("/members");
             }).fail(function (err) {
                 showErr("Error occurred while Saving, check all the values entered")
             });
@@ -88,6 +90,7 @@ $(document).ready(function () {
             $("#inputEmergencyName").removeClass("err");
             $("#inputRelationship").removeClass("err");
             $("#inputEmergencyPhN").removeClass("err");
+            
         }
 
     });

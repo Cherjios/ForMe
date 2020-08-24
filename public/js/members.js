@@ -10,6 +10,17 @@ $(document).ready(function () {
     $(".member-name").text(data.name.toUpperCase());
   });
 
+  $.get("/api/personalInfo").then(function (data) {
+    if(data){
+      var span = $("<span>").text("Completed");
+      var br = $("<br>")
+      personalInfo.append(br);
+      span.addClass("text-success");
+      personalInfo.append(span);
+    }
+  
+  });
+
   // Action when user click on "Personal information"
   personalInfo.on("click", function (event) {
     event.preventDefault();
