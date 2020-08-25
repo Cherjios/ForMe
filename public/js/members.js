@@ -4,6 +4,7 @@ $(document).ready(function () {
   var dentalHistory = $("#dentalHistory");
   var personalInfoTitle = $("#personalInfoTitle");
   var personalInfoB = $("#personalInfoB");
+  
 
 
   // This file just does a GET request to figure out which user is logged in
@@ -32,8 +33,23 @@ $(document).ready(function () {
         var update_button = $("<button>");
         update_button.text("Update");
         update_button.addClass("btn btn-warning");
+        update_button.attr("id","updatePersonalInfoB");
         personalInfo.append(update_button);
         personalInfoB.attr("style", "display:none"); 
+
+        var updatePersonalInfoB = $("#updatePersonalInfoB");
+
+        
+        //Action when user click on Update personal information"
+        updatePersonalInfoB.on("click", function(event){
+          event.preventDefault();
+          GotoUpdatePersonalInfo();
+        })
+      
+        function GotoUpdatePersonalInfo(){
+          window.location.replace("/updatePersonalInformation.html");
+        }
+
       }
     });
 
