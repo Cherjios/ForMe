@@ -57,8 +57,12 @@ module.exports = function (app) {
   });
 
 
-  app.get("/api/personalInfo", function (req, res) {
-    db.PersonalInfo.findAll({}).then(function (dbItem) {
+  app.get("/api/personalInfo/:id", function (req, res) {
+    db.PersonalInfo.findAll({
+      where:{
+        UserId:req.params.id
+      }
+    }).then(function (dbItem) {
         res.json(dbItem);
     }).catch(function (err) {
         res.status(404).json(err);

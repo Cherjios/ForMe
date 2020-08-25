@@ -11,22 +11,36 @@ $(document).ready(function () {
   $.get("/api/user_data").then(function (data) {
     console.log(data);
     $(".member-name").text(data.name.toUpperCase());
+    userID = data.id;
+
+    $.get("/api/personalInfo/"+userID).then(function (data) {
+      console.log(data);
+
+      function isEmpty(obj) {
+        for(var key in obj) {
+            if(obj.hasOwnProperty(key))
+                return false;
+        }
+        return true;
+    }
+  
+      if(!isEmpty(data)){
+        var span = $("<span>").text("Completed");
+        span.addClass("text-success");
+        personalInfoTitle.append(span);
+        var update_button = $("<button>");
+        update_button.text("Update");
+        update_button.addClass("btn btn-warning");
+        personalInfo.append(update_button);
+        personalInfoB.attr("style", "display:none"); 
+      }
+    });
+
+    
+  
   });
 
-  $.get("/api/personalInfo").then(function (data) {
-    console.log(data);
-
-    if(data){
-    }  
-      var span = $("<span>").text("Completed");
-      span.addClass("text-success");
-      personalInfoTitle.append(span);
-      var update_button = $("<button>");
-      update_button.text("Update");
-      update_button.addClass("btn btn-warning");
-      personalInfo.append(update_button);
-      personalInfoB.attr("style", "display:none"); 
-  });
+  
 
   // Action when user click on "Personal information"
   personalInfoB.on("click", function (event) {
