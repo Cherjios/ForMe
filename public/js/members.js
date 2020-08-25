@@ -16,6 +16,7 @@ $(document).ready(function () {
     $.get("/api/personalInfo/"+userID).then(function (data) {
       console.log(data);
 
+      //Function to check if a data is a empty obj
       function isEmpty(obj) {
         for(var key in obj) {
             if(obj.hasOwnProperty(key))
@@ -36,8 +37,6 @@ $(document).ready(function () {
       }
     });
 
-    
-  
   });
 
   
