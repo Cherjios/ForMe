@@ -56,13 +56,14 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/personalInfo", function(req, res) {
+  // app.get("/api/personalInfo", function(req, res) {
 
-    db.personalInfo.findAll({}).then(function(personalInfoItem){
-      res.json(personalInfoItem);
-    }).catch(function(err){
-      res.status(404).json(err);
-    });
+  //   db.personalInfo.findAll({}).then(function(personalInfoItem){
+  //     res.json(personalInfoItem);
+  //   }).catch(function(err){
+  //     res.status(404).json(err);
+  //   });
+
     // if (!req.personalInfo) {
     //   // The user is not logged in, send back an empty object
     //   res.json({});
@@ -84,16 +85,8 @@ module.exports = function(app) {
     //     relationship:req.personalInfo.relationship,
     //     emergencyPhoneNumber:req.personalInfo.emergencyContactName
     //   });
-  //   }
-  });
-
-
-
-
-
-
-
-
+    // }
+  // });
 
 
 
