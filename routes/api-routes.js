@@ -57,28 +57,34 @@ module.exports = function(app) {
   });
 
   app.get("/api/personalInfo", function(req, res) {
-    if (!req.PersonalInfo) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    } else {
-      
-      res.json({
-        name: req.PersonalInfo.name,
-        last_name: req.PersonalInfo.last_Name,
-        address: req.PersonalInfo.address,
-        address2: req.PersonalInfo.address2,
-        city:req.PersonalInfo.city,
-        state:req.PersonalInfo.state,
-        zipCode:req.PersonalInfo.zipCode,
-        phoneNumber:req.PersonalInfo.phoneNumber,
-        whPhoneNumber:req.PersonalInfo.whPhoneNumber,
-        dateOfBirth:req.PersonalInfo.dateOfBirth,
-        sex:req.PersonalInfo.sex,
-        emergencyContactName:req.PersonalInfo.emergencyContactName,
-        relationship:req.PersonalInfo.relationship,
-        emergencyPhoneNumber:req.PersonalInfo.emergencyContactName
-      });
-    }
+
+    db.personalInfo.findAll({}).then(function(personalInfoItem){
+      res.json(personalInfoItem);
+    }).catch(function(err){
+      res.status(404).json(err);
+    });
+    // if (!req.personalInfo) {
+    //   // The user is not logged in, send back an empty object
+    //   res.json({});
+    // } else {
+    //   res.json({
+    //     id:req.personalInfo.id,
+    //     name: req.personalInfo.name,
+    //     last_name: req.personalInfo.last_Name,
+    //     address: req.PersonalInfo.address,
+    //     address2: req.personalInfo.address2,
+    //     city:req.personalInfo.city,
+    //     state:req.personalInfo.state,
+    //     zipCode:req.personalInfo.zipCode,
+    //     phoneNumber:req.personalInfo.phoneNumber,
+    //     whPhoneNumber:req.personalInfo.whPhoneNumber,
+    //     dateOfBirth:req.personalInfo.dateOfBirth,
+    //     sex:req.personalInfo.sex,
+    //     emergencyContactName:req.personalInfo.emergencyContactName,
+    //     relationship:req.personalInfo.relationship,
+    //     emergencyPhoneNumber:req.personalInfo.emergencyContactName
+    //   });
+  //   }
   });
 
 
