@@ -14,8 +14,10 @@ $(document).ready(function () {
   });
 
   $.get("/api/personalInfo").then(function (data) {
-    
-      console.log(data);
+    console.log(data);
+
+    if(data){
+    }  
       var span = $("<span>").text("Completed");
       span.addClass("text-success");
       personalInfoTitle.append(span);
@@ -23,9 +25,7 @@ $(document).ready(function () {
       update_button.text("Update");
       update_button.addClass("btn btn-warning");
       personalInfo.append(update_button);
-      personalInfoB.attr("style", "display:none");
-    
-    
+      personalInfoB.attr("style", "display:none"); 
   });
 
   // Action when user click on "Personal information"
