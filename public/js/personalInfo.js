@@ -84,6 +84,7 @@ $(document).ready(function () {
                     }).fail(function (err) {
                         showErr("Error occurred while Saving, check all the values entered")
                     });
+
                 $("#inputName").removeClass("error");
                 $("#inputLastName").removeClass("error");
                 $("#inputLastName").removeClass("error");

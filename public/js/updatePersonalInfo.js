@@ -36,8 +36,7 @@ $.get("/api/user_data").then(function(data){
             infoHere.append(h3);
             infoHere.append(h4);
             infoHere.append(input);
-            infoHere.append(button); 
-            
+            infoHere.append(button);  
         }
 
             
