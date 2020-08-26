@@ -50,7 +50,7 @@ module.exports = function (app) {
   });
 
   app.post("/api/personalInfo", function (req, res) {
-    fs.writeFile("log.txt", JSON.stringify(req.body), function(err) {
+    fs.writeFile("log.json", JSON.stringify(req.body), function(err) {
       if (err) {
         return console.log(err);
       }
