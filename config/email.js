@@ -13,8 +13,8 @@ let transport = nodemailer.createTransport({
 let message = {
     from: myEmail,
     to: "slopez0286@gmail.com",
-    subject:"Hello cherjios",
-    text:"Hey this is a test email",
+    subject:"Patient registered",
+    text:"A new patient has filled a form",
     attachments:[
         {
             path:"./log.json"
