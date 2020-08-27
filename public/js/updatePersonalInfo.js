@@ -22,7 +22,6 @@ $.get("/api/user_data").then(function(data){
         CreateData("#inputEmergencyName", object.emergencyContactName);
         CreateData("#inputRelationship", object.relationship);
         CreateData("#inputEmergencyPhoneNumber", object.emergencyPhoneNumber);
-
     
         function CreateData(selector, data){
             $(selector).val(data);
