@@ -24,12 +24,18 @@ $.get("/api/user_data").then(function(data){
         CreateData("Emergency Concat Phone Number", object.emergencyPhoneNumber);
 
     
-        function CreateData(tile, data){
-            var h3 = $("<h3>").text(tile+":");
-            var h4 = $("<p>").text(data);
+        function CreateData(title, data){
+            var h3 = $("<h3>").text(title+":");
+            var h4 = $("<h2>").text(data);
             h4.addClass("text-success")
             var input = $("<input>");
             input.addClass("form-control");
+            if(title === "Day of birth"){
+                input.attr("type","date")
+            }
+            else{
+                input.attr("type","text")
+            }
             var button = $("<button>").text("Update");
             button.addClass("btn btn-warning")
             var infoHere = $("#infoHere");
