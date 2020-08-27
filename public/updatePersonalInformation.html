@@ -1,132 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Cesar Zamora DDS Update Personal information</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link href="stylesheets/updatePersonalInformation.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="../stylesheets/personalInfo.css">
+
+
+
+    <title>Update Personal Information</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
-          Logout
-        </a>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Fill up your personal information <span class="member-name"></span></h1>
+        <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
       </div>
     </div>
-  </nav>
-
-  <div class="container">
-    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-      <span class="sr-only">Error:</span> <span class="msg"></span>
-    </div>    
-    <form id="GetPersonalInfo">
-      <div class="row">
-        <div class="col">
-          <label for="Name">Name</label>
-          <input type="text" class="form-control"  id="inputName">
+    <div class="container">
+      <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span> <span class="msg"></span>
+      </div>    
+      <form id="GetPersonalInfo">
+        <div class="row">
+          <div class="col">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" placeholder="First name" id="inputName">
+          </div>
+          <div class="col">
+            <label for="Name">Last Name</label>
+            <input type="text" class="form-control" placeholder="Last name" id="inputLastName">
+          </div>
         </div>
-        <div class="col">
-          <label for="Name">Last Name</label>
-          <input type="text" class="form-control"  id="inputLastName">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Date of birth</label>
+          <input type="date" class="form-control" id="inputDateOfBirth">
         </div>
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlInput1">Date of birth</label>
-        <input type="date" class="form-control" id="inputDateOfBirth">
-      </div>
-
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Sex</label>
-        <select class="form-control" id="inputSex">
-          <option>MALE</option>
-          <option>FEMALE</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" id="inputAddress">
-      </div>
-      <div class="form-group">
-        <label for="inputAddress2">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2">
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>CA</option>
-            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CO</option><option>CT</option><option>DE</option><option>FL</option><option>GA</option> <option>HI</option><option>ID</option>
-            <option>IL</option><option>IN</option><option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option><option>MD</option><option>MA</option> <option>MI</option><option>MN</option>
-            <option>MS</option><option>MO</option><option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option><option>NM</option> <option>NY</option><option>NC</option>
-            <option>ND</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option> <option>TX</option><option>UT</option>
-            <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option><option>AS</option><option>DC</option><option>FM</option> <option>GU</option><option>MH</option>
-            <option>MP</option><option>PW</option><option>PR</option><option>IV</option>
+  
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Sex</label>
+          <select class="form-control" id="inputSex">
+            <option>MALE</option>
+            <option>FEMALE</option>
           </select>
         </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <label for="Name">Phone Number</label>
-          <input type="tel" class="form-control" id="inputPhoneNumber">
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
         </div>
-        <div class="col">
-          <label for="Name">Work/Home Number</label>
-          <input type="tel" class="form-control" id="inputWHPhoneNumber">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+              <option selected>CA</option>
+              <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CO</option><option>CT</option><option>DE</option><option>FL</option><option>GA</option> <option>HI</option><option>ID</option>
+              <option>IL</option><option>IN</option><option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option><option>MD</option><option>MA</option> <option>MI</option><option>MN</option>
+              <option>MS</option><option>MO</option><option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option><option>NM</option> <option>NY</option><option>NC</option>
+              <option>ND</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option> <option>TX</option><option>UT</option>
+              <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option><option>AS</option><option>DC</option><option>FM</option> <option>GU</option><option>MH</option>
+              <option>MP</option><option>PW</option><option>PR</option><option>IV</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
         </div>
-      </div>
-
-      
-      <div class="form-group">
-        <label for="Emergency contact name">Emergency Contact Name</label>
-        <input type="text" class="form-control" id="inputEmergencyName">
-      </div>
-      <div class="row">
-        <div class="col">
-          <label for="Name">Relationship</label>
-          <input type="text" class="form-control"  id="inputRelationship">
+        <div class="row">
+          <div class="col">
+            <label for="Name">Phone Number</label>
+            <input type="tel" class="form-control" id="inputPhoneNumber">
+          </div>
+          <div class="col">
+            <label for="Name">Work/Home Number</label>
+            <input type="tel" class="form-control" id="inputWHPhoneNumber">
+          </div>
         </div>
-        <div class="col">
-          <label for="Name">Emergency Contact Phone Number</label>
-          <input type="tel" class="form-control"  id="inputEmergencyPhoneNumber">
+  
+        
+        <div class="form-group">
+          <label for="Emergency contact name">Emergency Contact Name</label>
+          <input type="text" class="form-control" id="inputEmergencyName">
         </div>
-      </div>
-      <div class="form-group form-check">
-      </div>
-      <button type="submit" class="btn btn-warning">Update</button>
-
-    </form>
-  </div>
-
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <div class="row">
+          <div class="col">
+            <label for="Name">Relationship</label>
+            <input type="text" class="form-control" placeholder="Relationship" id="inputRelationship">
+          </div>
+          <div class="col">
+            <label for="Name">Emergency Contact Phone Number</label>
+            <input type="tel" class="form-control" placeholder="Emergency Contact Phone Number" id="inputEmergencyPhoneNumber">
+          </div>
+        </div>
+        <div class="form-group form-check">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+  
+      </form>
+    </div>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./js/updatePersonalInfo.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/updatePersonalInfo.js"></script>
-
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+      
+  </body>
 
 </html>

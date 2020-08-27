@@ -83,7 +83,7 @@ module.exports = function (app) {
 
 
  // update data with particular id
- app.put("/api/item/", function (req, res) {
+ app.put("/api/personaInfoItem/", function (req, res) {
   console.log(req.body);
   db.PersonalInfo.update(
       req.body,
