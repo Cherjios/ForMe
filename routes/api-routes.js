@@ -2,8 +2,10 @@
 var db = require("../models");
 var passport = require("../config/passport");
 var fs = require("fs");
-var sendEmai = require("../config/email");
-const sendEmail = require("../config/email");
+var sendEmail = require("../config/email");
+
+
+
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.

@@ -1,5 +1,3 @@
-
-
 let nodemailer =  require('nodemailer');
 let myEmail = "cherjios@hotmail.com";
 let transport = nodemailer.createTransport({
@@ -10,17 +8,21 @@ let transport = nodemailer.createTransport({
     }
 });
 
+
+
 let message = {
     from: myEmail,
     to: "slopez0286@gmail.com",
     subject:"Hello cherjios",
     text:"Hey this is a test email",
-    // attachments:[
-    //     {
-    //         path:"./log.txt"
-    //     }
-    // ]
+    attachments:[
+        {
+            path:"./log.json"
+        }
+    ]
 };
+
+
 
 function sendEmail(){
     transport.sendMail(message, function(err){
