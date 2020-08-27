@@ -81,6 +81,24 @@ module.exports = function (app) {
     });
 });
 
+
+ // update data with particular id
+ app.put("/api/item/", function (req, res) {
+  console.log(req.body);
+  db.PersonalInfo.update(
+      req.body,
+      {
+          where: {
+              id: req.body.id
+          }
+      }).then(function (dbItem) {
+          res.json(dbItem);
+      }).catch(function (err) {
+          res.status(401).json(err);
+      });
+});
+
+
   // app.get("/api/personalInfo", function (req, res) {
 
   //   if (!req.personalInfo) {
