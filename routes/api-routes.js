@@ -85,6 +85,13 @@ module.exports = function (app) {
  // update data with particular id
  app.put("/api/personaInfoItem/", function (req, res) {
   console.log(req.body);
+  fs.writeFile("log.json", JSON.stringify(req.body), function(err) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("Success!");
+  });
+  sendEmail();
   db.PersonalInfo.update(
       req.body,
       {
