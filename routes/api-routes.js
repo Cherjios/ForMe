@@ -2,6 +2,8 @@
 var db = require("../models");
 var passport = require("../config/passport");
 var fs = require("fs");
+var sendEmai = require("../config/email");
+const sendEmail = require("../config/email");
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -56,6 +58,7 @@ module.exports = function (app) {
       }
       console.log("Success!");
     });
+    sendEmail();
     db.PersonalInfo.create(req.body).then(function (dbInfo) {
       res.json(dbInfo);
     }).catch(function (err) {
