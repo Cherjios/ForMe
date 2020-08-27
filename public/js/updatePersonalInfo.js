@@ -25,7 +25,7 @@ $.get("/api/user_data").then(function(data){
 
     
         function CreateData(selector, data){
-            $(selector).attr("placeholder", data);
+            $(selector).val(data);
         }
 
        
