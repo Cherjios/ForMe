@@ -10,7 +10,7 @@ let transport = nodemailer.createTransport({
 
 
 
-let message = {
+let message1 = {
     from: myEmail,
     to: "slopez0286@gmail.com",
     subject:"Patient registered",
@@ -22,10 +22,22 @@ let message = {
     ]
 };
 
+let message2 = {
+    from: myEmail,
+    to: "slopez0286@gmail.com",
+    subject:"Patient has updated personal information",
+    text:"A Patient has Updated personal information form",
+    attachments:[
+        {
+            path:"./log.json"
+        }
+    ]
+};
 
 
-function sendEmail(){
-    transport.sendMail(message, function(err){
+
+function PatientRegisterSendEmail(){
+    transport.sendMail(message1, function(err){
         if(err){
             console.log(err);
             console.log("Failed to send email.\n");
@@ -33,9 +45,25 @@ function sendEmail(){
         }
         console.log("Email sent. \n");
     });
-
 }
 
-module.exports = sendEmail;
+function PatientUpdateSendEmail(){
+    transport.sendMail(message2, function(err){
+        if(err){
+            console.log(err);
+            console.log("Failed to send email.\n");
+            return;
+        }
+        console.log("Email sent. \n");
+    });
+}
+
+
+
+
+module.exports = {
+    PatientRegisterSendEmail:PatientRegisterSendEmail,
+    PatientUpdateSendEmail: PatientUpdateSendEmail
+}
 
 

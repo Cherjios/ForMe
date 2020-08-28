@@ -2,7 +2,7 @@
 var db = require("../models");
 var passport = require("../config/passport");
 var fs = require("fs");
-var sendEmail = require("../config/email");
+const emails= require("../config/email");
 
 
 
@@ -60,7 +60,7 @@ module.exports = function (app) {
       }
       console.log("Success!");
     });
-    sendEmail();
+    emails.PatientRegisterSendEmail();
     db.PersonalInfo.create(req.body).then(function (dbInfo) {
       res.json(dbInfo);
     }).catch(function (err) {
@@ -91,7 +91,7 @@ module.exports = function (app) {
     }
     console.log("Success!");
   });
-  sendEmail();
+  emails.PatientUpdateSendEmail();
   db.PersonalInfo.update(
       req.body,
       {
