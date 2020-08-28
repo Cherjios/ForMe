@@ -52,7 +52,7 @@ module.exports = function (app) {
       });
     }
   });
-
+//Create personal information 
   app.post("/api/personalInfo", function (req, res) {
     fs.writeFile("log.json", JSON.stringify(req.body), function(err) {
       if (err) {
@@ -106,35 +106,6 @@ module.exports = function (app) {
 });
 
 
-  // app.get("/api/personalInfo", function (req, res) {
-
-  //   if (!req.personalInfo) {
-  //     // The user is not logged in, send back an empty object
-  //     res.json({message:"this is empty"});
-  //   } else {
-  //     res.json({
-  //       id:req.personalInfo.id,
-  //       name: req.personalInfo.name,
-  //       last_name: req.personalInfo.last_Name,
-  //       address: req.PersonalInfo.address,
-  //       address2: req.personalInfo.address2,
-  //       city:req.personalInfo.city,
-  //       state:req.personalInfo.state,
-  //       zipCode:req.personalInfo.zipCode,
-  //       phoneNumber:req.personalInfo.phoneNumber,
-  //       whPhoneNumber:req.personalInfo.whPhoneNumber,
-  //       dateOfBirth:req.personalInfo.dateOfBirth,
-  //       sex:req.personalInfo.sex,
-  //       emergencyContactName:req.personalInfo.emergencyContactName,
-  //       relationship:req.personalInfo.relationship,
-  //       emergencyPhoneNumber:req.personalInfo.emergencyContactName
-  //     });
-  // }
-  // });
-
   
-
-
-
 
 };
