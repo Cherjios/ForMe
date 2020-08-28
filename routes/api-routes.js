@@ -68,7 +68,7 @@ module.exports = function (app) {
     });
   });
 
-
+//Update personal information
   app.get("/api/personalInfo/:id", function (req, res) {
     db.PersonalInfo.findAll({
       where:{
