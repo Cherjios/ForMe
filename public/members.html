@@ -11,22 +11,26 @@
 
   <link href="stylesheets/members.css" rel="stylesheet">
   <!-- google font  -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
-          Logout
-        </a>
-      </div>
-    </div>
-  </nav> -->
 
-  <div id="NavContainer"></div>
+  <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center navcolor1">
+    <a href="/members" class="navbar-brand d-flex w-50 mr-auto"><samp class="text-white textNav">ForMe</samp></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+      <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link " href="/logout"><span class="text-white">Logout</span></a>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- <div id="NavContainer"></div> -->
 
   <div class="jumbotron jumbotron-fluid sjumbotron">
     <div class="container">
@@ -35,7 +39,9 @@
     </div>
   </div>
 
-  <div class="container fluid">
+
+
+  <div class="container s2jumbotron">
     <div class="row">
       <div class="col">
         <h2> Forms to fill up</h2>
@@ -49,9 +55,11 @@
       </div>
     </div>
   </div>
-  <br/><br/><br/>
- <!-- Footer begins here  -->
- <div id="FooterHere"></div>
+
+
+  <br /><br /><br />
+  <!-- Footer begins here  -->
+  <div id="FooterHere"></div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

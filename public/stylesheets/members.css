@@ -14,7 +14,49 @@ background-image: linear-gradient(315deg, #537895 0%, #09203f 74%); */
   color: white;
 }
 
-.sjumbotron, .sform, .sfooter{
+.navcolor1{
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+.sjumbotron,.sform, .sfooter {
   background-color: #2a2a72;
 background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
+
+
+.s2jumbotron{
+  background-color: #537895;
+background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+padding:5%;
+border-radius: 25px;
+
+}
+
+.textNav{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 900;
+}
+
+
+  /* unvisited link */
+  a.repoLink:link {
+    color: white;
+  }
+  
+  /* visited link */
+  a.repoLink:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a.repoLink:hover {
+    color: skyblue;
+  }
+  
+  /* selected link */
+  a.repoLink:active {
+    color: white;
+  }
