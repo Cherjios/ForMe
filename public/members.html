@@ -5,9 +5,13 @@
   <title>Welcome-ForMe</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link href="stylesheets/style.css" rel="stylesheet">
+
+  <link href="stylesheets/members.css" rel="stylesheet">
+   <!-- google font  -->
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -35,13 +39,16 @@
         <h2> Forms to fill up</h2>
       </div>
     </div>
-    <br/>
+    <br />
 
     <div class="row">
       <div class="col" id="personalInfo">
         <h5 id="personalInfoTitle"> Personal information </h5>
         <button type="button" id="personalInfoB" class="btn btn-success">Add Personal information</button>
       </div>
+
+      <!-- Footer begins here  -->
+      <div id="FooterHere"></div>
 
 
 
@@ -54,13 +61,17 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-      <script type="text/javascript" src="js/members.js"></script> 
+      <script type="text/javascript" src="js/members.js"></script>
       <!-- Load React. -->
       <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
       <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
       <!-- Load our React component. -->
-      <script src="./src/navbar1.js"></script>
+      <!-- <script src="./Components/navbar1.js"></script> -->
+      
+      <script src="Components/navbar1.js"></script>
+      <script src="Components/footter.js"></script>
+      
 
 
 

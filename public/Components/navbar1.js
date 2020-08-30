@@ -2,7 +2,7 @@
 
 const e = React.createElement;
 
-class LikeButton extends React.Component {
+class Navbar1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = { liked: false };
@@ -52,4 +52,4 @@ class LikeButton extends React.Component {
 }
 
 const domContainer = document.querySelector('#NavContainer');
-ReactDOM.render(e(LikeButton), domContainer);
+ReactDOM.render(e(Navbar1), domContainer);

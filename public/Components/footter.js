@@ -1,17 +1,14 @@
 'use strict';
 
-const e = React.createElement;
+// const e = React.createElement;
 
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
+class Footer extends React.Component {
+  
 
   render() {
 
 
-    return e(
+    return React.createElement(
         "footer", null, React.createElement("div", {
             className: "container-fluid sfooter"
           }, React.createElement("div", {
@@ -61,5 +58,5 @@ class LikeButton extends React.Component {
   }
 }
 
-const domContainer = document.querySelector('#FooterHere');
-ReactDOM.render(e(LikeButton), domContainer);
+const domContainerFooter = document.querySelector('#FooterHere');
+ReactDOM.render(e(Footer), domContainerFooter);
