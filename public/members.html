@@ -21,6 +21,8 @@
     </div>
   </nav>
 
+  <div id="NavContainer"></div>
+
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Welcome "<span class="member-name"></span>"</h1>
@@ -52,7 +54,15 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-      <script type="text/javascript" src="js/members.js"></script>
+      <script type="text/javascript" src="js/members.js"></script> 
+      <!-- Load React. -->
+      <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+      <!-- Load our React component. -->
+      <script src="./src/navbar1.js"></script>
+
+
 
 </body>
 
