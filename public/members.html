@@ -10,8 +10,9 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <link href="stylesheets/members.css" rel="stylesheet">
-   <!-- google font  -->
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+  <!-- google font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,500&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -27,51 +28,52 @@
 
   <div id="NavContainer"></div>
 
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid sjumbotron">
     <div class="container">
       <h1 class="display-4">Welcome "<span class="member-name"></span>"</h1>
       <p class="lead">In order to be a patient and be seen by the doctor you need to fill up the following forms.</p>
     </div>
   </div>
-  <div class="container">
+
+  <div class="container fluid">
     <div class="row">
       <div class="col">
         <h2> Forms to fill up</h2>
       </div>
     </div>
     <br />
-
     <div class="row">
       <div class="col" id="personalInfo">
         <h5 id="personalInfoTitle"> Personal information </h5>
         <button type="button" id="personalInfoB" class="btn btn-success">Add Personal information</button>
       </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+ <!-- Footer begins here  -->
+ <div id="FooterHere"></div>
 
-      <!-- Footer begins here  -->
-      <div id="FooterHere"></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/members.js"></script>
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <!-- Load our React component. -->
+  <!-- <script src="./Components/navbar1.js"></script> -->
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="Components/navbar1.js"></script>
+  <script src="Components/footter.js"></script>
 
-      <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-      <script type="text/javascript" src="js/members.js"></script>
-      <!-- Load React. -->
-      <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-      <!-- Load our React component. -->
-      <!-- <script src="./Components/navbar1.js"></script> -->
-      
-      <script src="Components/navbar1.js"></script>
-      <script src="Components/footter.js"></script>
-      
 
 
 
