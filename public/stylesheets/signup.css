@@ -1,0 +1,25 @@
+body{
+  background-color:gainsboro;
+  font-family: 'Cinzel', serif;
+}
+
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+.sfooter{
+  background-color: whitesmoke;
+}
+
+.sform{
+  background-color:whitesmoke;
+}
+
+.tform{
+  font-size: 25px;
+}
+
+.tbottom{
+  font-size: 20px;
+}

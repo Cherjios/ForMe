@@ -5,8 +5,13 @@
   <title>Sign my form, Cesar Zamora DDS signup</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link href="stylesheets/signup.css" rel="stylesheet">
+  <!-- google font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,24 +19,24 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class=" text-center">ForMe</h1>
-      <p class="lead text-center">Help your medical entities to collect your personal information</p>
+      <p class="lead text-center .tform">Help your medical entities to collect your personal information</p>
     </div>
   </div>
-  
-  <div class="container">
+
+  <div class="container sform">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col">
         <h2>Sign Up Form</h2>
         <form class="signup">
-          <div class="form-group">
+          <div class="form-group tform">
             <label for="InputName">Name</label>
             <input type="text" class="form-control" id="name-input" placeholder="Name">
           </div>
-          <div class="form-group">
+          <div class="form-group tform">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
-          <div class="form-group">
+          <div class="form-group tform">
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
@@ -39,15 +44,45 @@
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
           </div>
-          <button type="submit" class="btn btn-default">Sign up!</button>
+          <button type="submit" class="btn btn-default tbottom">Sign up!</button>
         </form>
         <br />
-        <p>Or log in <a href="/login">here</a></p>
+        <p class="text-right tbottom">Or log in <a href="/login">here</a></p>
       </div>
     </div>
   </div>
+  <br /><br /><br />
+ 
+  <!-- Footer begins here  -->
+  <footer>
+    <div class="container-fluid sfooter">
+      <div class="row">
+        <div class="col">
+          <h3 class=" text-center">Sergio Lopez</h3>
+        </div>
+      </div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4"><h5>slopez0286@gmail.com </h5></div>
+          <div class="col-md-4">Github</div>
+          <div class="col-md-4">linkedin</div>
+        </div>
+        <div class="row">
+          <div class="col"><h4>Respo Link</h4></div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
+
+   <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  
   <script type="text/javascript" src="js/signup.js"></script>
 
 </body>
