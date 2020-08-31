@@ -34,8 +34,6 @@ let message2 = {
     ]
 };
 
-
-
 function PatientRegisterSendEmail(){
     transport.sendMail(message1, function(err){
         if(err){
