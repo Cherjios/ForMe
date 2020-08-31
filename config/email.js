@@ -1,3 +1,4 @@
+require('dotenv').config();
 let nodemailer =  require('nodemailer');
 let myEmail = "cherjios@hotmail.com";
 let transport = nodemailer.createTransport({
