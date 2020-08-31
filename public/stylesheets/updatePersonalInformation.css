@@ -23,6 +23,10 @@ background-image: linear-gradient(315deg, #537895 0%, #09203f 74%); */
     font-family: 'Montserrat Alternates', sans-serif;
   
   }
+  .textNav{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 900;
+  }
 
 .djumbotron, .sform, .sfooter{
     background-color: #2a2a72;

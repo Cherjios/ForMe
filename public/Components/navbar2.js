@@ -34,7 +34,7 @@ class Navbar2 extends React.Component {
             className: "nav-item"
           }, React.createElement("a", {
             className: "nav-link ",
-            href: "/memebers"
+            href: "/members"
           }, React.createElement("span", {
             className: "text-white"
           }, "Home"))), React.createElement("li", {
