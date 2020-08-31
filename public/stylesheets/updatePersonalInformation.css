@@ -65,11 +65,13 @@ a.repoLink:link {
     color: white;
   }
 
-  @media (max-width: 600px) { 
-    .ftitle{
-      font-size: 20px;
-    }
-    .djumbotron{
-      font-size: 25px;
-    }
-  }
+  @media (max-width: 576px) {
+   .ftitle{
+     font-size: 18px;
+   }
+   .djumbotron{
+     font-size: 25px;
+   }
+
+
+   }
