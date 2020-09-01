@@ -9,6 +9,7 @@ This application could be customized depending on the information we want to col
 [https://formesergio.herokuapp.com/](https://formesergio.herokuapp.com/)
 
 ## View
+![img](./public/img/ForMe.gif)
 
 ### Full Screen
 ![img](./public/img/1.png)
@@ -32,12 +33,12 @@ This application could be customized depending on the information we want to col
 
 ## Installation
 ```
-git clone git@github.com:Cherjios/Portfolio-page-2.git
-cd Portfolio-page-2.git
+git clone git@github.com:Cherjios/Sign-my-form.git
+cd Sign-my-form.git
 ```
-### Instaling npm packages 
+### Instaling dependencies npm packages 
 ```
-npm install express
+npm install
 ```
 
 ## Technology
@@ -47,15 +48,26 @@ npm install express
 
 ## Tools
 * [Node.js](https://nodejs.org/en/)
+* [Jquery](https://jquery.com/)
 * [npm](https://www.npmjs.com/)
+* [Babel](https://babeljs.io/docs/en/)
+* [Bcryptjs](https://www.npmjs.com/package/bcryptjs)
+* [Dotenv](https://www.npmjs.com/package/dotenv)
+* [Express](https://expressjs.com/)
+* [Mysql](https://www.mysql.com/)
+* [Nodemailer](https://nodemailer.com/about/)
+* [Express](https://expressjs.com/)
+* [Passport](http://www.passportjs.org/)
+* [Sequelize](https://sequelize.org/)
+* [Bootstrap](https://getbootstrap.com/)
 
 ## Contributing
 * **SERGIO LOPEZ** 
 
-- [Link to Portfolio Site](https://cherjios.github.io/Responsive-Portfolio/)
+- [Link to Portfolio Site](https://cherjios.github.io/React-Portfolio/)
 - [Link to Github](https://github.com/cherjios)
 - [Link to LinkedIn](https://www.linkedin.com/in/sergio-lopez-81790579)
 
 ## Questions
- sc.lopezm@gmail.com
+ slopez0286@gmail.com
 
